@@ -1,0 +1,107 @@
+\documentclass{article}
+\usepackage{arxiv}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsfonts, amsmath}
+\usepackage{nicefrac}
+\usepackage{microtype}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\graphicspath{ {./figures/} }
+
+\title{Covid-19 detection based on breathing sounds Project Proposal}
+
+\author{
+  Yugant Hadiyal
+%  \thanks{Use footnote for providing further
+%    information about author (webpage, alternative
+%    address)}
+    \\
+  \texttt{yugant-mukeshbhai.hadiyal@tu-ilmenau.de} \\
+  %% examples of more authors
+  \And
+  Mukesh Kumar Sharma \\
+  \texttt{mukesh-kumar.sharma@tu-ilmenau.de} \\
+%  \thanks{Use footnote for providing further
+%    information about author (webpage, alternative
+%    address)}
+\And
+  Hamza Saeed\\
+  \texttt{hamza.saeed@tu-ilmenau.de} \\
+  %% examples of more authors
+  \And
+  Hammad Tahir \\
+  \texttt{hammad.tahir@tu-ilmenau.de} \\
+
+  \AND
+  Project Mentor: Martin Hofmann\\ 
+  \texttt{martin.hofmann@tu-ilmenau.de} \\
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+Detection of COVID-19 using deep learning on X-ray images has an accuracy of nearly 100\%. Taking x-ray images is costly and takes time, so instead of that, if we have a classifier for sound spectrogram or sound recordings, it may have a real-time application. This paper will conduct experiments with deep-learning models like RNNs and Transformers to detect COVID-19 from breathing sound of the patient because of its extraordinary capacity to offer an accurate and efficient system.
+
+\end{abstract}
+
+
+\section{Introduction}	
+It is almost impossible to detect COVID19 by listening to the breathing of a covid patient by a human, so we will need a system that can do so. If this detection can be done using artificial intelligence, it can be readily available to everyone having an internet connection and thus, we can reduce the cost and time of testing.
+Any of the present methods for COVID-19 testing need a laboratory kit and medical staff, the provision of which is difficult or even impossible for many countries during crises and epidemics. Detection of COVID-19 by the breathing sound of the patient can be beneficial for initial screening at public places. On training a deep learning model with reasonable accuracy, this solution can be an alternative to the current testing methods for a quick, low cost and better testing experience.
+The input to the model is breathing sound converted to the spectrogram of a patient, and output is the result stating whether the patient is positive or negative. We plan to experiment with RNNs, Transformers and Dense Neural Network.
+
+
+\section{Related Work}
+What reading will you examine to provide context and background?
+If relevant, what papers do you refer to?
+
+\section{Dataset and Features}
+Describe your dataset: how many training/validation/test examples do you have?
+Is there any preprocessing required? 
+What about normalization or data augmentation?
+What is the resolution of your images? 
+How is your time-series data discretized? 
+Include a citation on where you obtained your dataset from. 
+If you plan to extract features using Fourier transforms, word2vec, PCA, ICA, etc. make sure to talk about it. 
+You might also include a representative sample of the dataset. Make sure it is relevant for highlighting your task.
+
+
+\section{ Methods }
+Briefly describe the learning algorithms you plan to use. 
+If there are existing implementations, will you use them and how? 
+How do you plan to improve or modify such implementations?
+Additionally, if you are using a niche or cutting-edge algorithm (anything else not covered in the course), you may want to explain your algorithm using 1/2 paragraphs. 
+
+
+\section{Design of Experiment}
+
+We plan to implement this project using python programming language and deep learning frameworks like Tensorflow/Keras. 
+Hyper-parameters that we plan to use for this project are Learning-rate, Mini-Batch Size, Number of Epochs.
+Parameters: Activation function, the structure of the neural network, the optimization technique. Performance metrics that will be used in this project are truth table, accuracy and/or confusion matrix.
+
+\section{Contributions}
+This section should describe what each team member will work on and contribute to the project. 
+
+
+\section*{References}
+This section should include citations for papers as well as code libraries and datasets.
+Acceptable formats include: MLA, APA, IEEE. 
+If you do not use one of these formats, each reference entry must include the following (preferably in this order): author(s), title, conference/journal, publisher, year. 
+We are excluding the references section from the page limit to encourage students to perform a thorough literature review/related work section without being space-penalized if they include more references. 
+Any choice of citation style is acceptable as long as you are consistent. 
+Example citation: Goodfellow et al.~\cite{GoodfellowBook2016}.
+
+%\medskip
+%\small
+
+\bibliographystyle{unsrt}  
+\bibliography{references} 
+
+\end{document}
